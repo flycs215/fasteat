@@ -8,6 +8,7 @@ import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -20,22 +21,29 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String status;
+
     private String name;
 
-    private Integer price;
+    private String title;
 
     private String content;
 
-    // 1:N
+    private Integer price;
 
-    // LAZY = 지연로딩, EAGAR = 즉시로딩
+    private String brandName;
 
-    // LAZY = SELECT * FROM item where id = ?
+    private LocalDateTime registeredAt;
 
-    // EAGER =
-    // JOIN item item0_ left outer join order_detail orderdetai1_ on item0_.id=orderdetai1_.item_id left outer join user user2_ on orderdetai1_.user_id=user2_.id
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "item")
-    private List<OrderDetail> orderDetailList;
+    private LocalDateTime unregisteredAt;
+
+    private LocalDateTime createdAt;
+
+    private String createdBy;
+
+    private LocalDateTime updatedAt;
+
+    private String updatedBy;
 
 
 }

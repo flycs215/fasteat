@@ -20,30 +20,12 @@ public class UserRepositoryTest extends FasteatApplicationTests {
     @Test
     public void create(){
 
-        User user = new User();
-        user.setAccount("TestUser03");
-        user.setEmail("TestUser03@gmail.com");
-        user.setPhoneNumber("010-1111-3333");
-        user.setCreatedAt(LocalDateTime.now());
-        user.setCreatedBy("TestUser3");
-
-        User newUser = userRepository.save(user);
-        System.out.println("newUser : " +newUser);
-
     }
 
     @Test
     @Transactional
     public void read(){
-        Optional<User> user = userRepository.findByAccount("TestUser03");
 
-        user.ifPresent(selectUser ->{
-
-            selectUser.getOrderDetailList().stream().forEach(detail->{
-                Item item = detail.getItem();
-                System.out.println(item);
-            });
-        });
 
     }
 

@@ -1,6 +1,6 @@
 package historiab.fasteat.repository;
 
-import historiab.fasteat.FasteatApplicationTests;
+import historiab.fasteat.FastestApplicationTests;
 import historiab.fasteat.model.entity.OrderDetail;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class OrderDetailRepositoryTest extends FasteatApplicationTests {
+public class OrderDetailRepositoryTest extends FastestApplicationTests {
 
     @Autowired
     private OrderDetailRepository orderDetailRepository;

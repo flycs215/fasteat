@@ -1,0 +1,1 @@
+SELECT * FROM fasteat.admin_user;

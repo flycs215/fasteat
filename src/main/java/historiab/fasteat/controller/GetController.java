@@ -1,6 +1,7 @@
 package historiab.fasteat.controller;
 
 import historiab.fasteat.model.SearchParam;
+import historiab.fasteat.model.network.Header;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -33,6 +34,13 @@ public class GetController {
         System.out.println(searchParam.getPage());
 
         return searchParam;
+    }
+
+    @GetMapping("/header")
+    public Header getHeader(){
+
+        // {"resultCode : "OK", "description" : "OK"}
+        return Header.builder().resultCode("OK").description("OK").build();
     }
 
 }

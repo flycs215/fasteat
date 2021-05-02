@@ -1,16 +1,15 @@
 package historiab.fasteat.repository;
 
-import historiab.fasteat.FasteatApplicationTests;
+import historiab.fasteat.FastestApplicationTests;
 import historiab.fasteat.model.entity.Category;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.Assert;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-public class CategoryRepositoryTest extends FasteatApplicationTests {
+public class CategoryRepositoryTest extends FastestApplicationTests {
 
     @Autowired
     private CategoryRepository categoryRepository;

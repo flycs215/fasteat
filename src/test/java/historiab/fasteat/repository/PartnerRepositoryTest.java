@@ -1,6 +1,6 @@
 package historiab.fasteat.repository;
 
-import historiab.fasteat.FasteatApplicationTests;
+import historiab.fasteat.FastestApplicationTests;
 import historiab.fasteat.model.entity.Partner;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 
-public class PartnerRepositoryTest extends FasteatApplicationTests {
+public class PartnerRepositoryTest extends FastestApplicationTests {
 
     @Autowired
     private PartnerRepository partnerRepository;
@@ -39,7 +39,7 @@ public class PartnerRepositoryTest extends FasteatApplicationTests {
         partner.setRegisteredAt(registeredAt);
         partner.setCreatedAt(createdAt);
         partner.setCreatedBy(createdBy);
-        partner.setCategoryId(categoryId);
+//        partner.setCategoryId(categoryId);
 
         Partner newPartner = partnerRepository.save(partner);
         Assertions.assertNotNull(newPartner);

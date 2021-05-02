@@ -1,14 +1,12 @@
 package historiab.fasteat.repository;
 
-import historiab.fasteat.FasteatApplicationTests;
+import historiab.fasteat.FastestApplicationTests;
 import historiab.fasteat.model.entity.AdminUser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.time.LocalDateTime;
-
-public class AdminUserRepositoryTest extends FasteatApplicationTests {
+public class AdminUserRepositoryTest extends FastestApplicationTests {
 
     @Autowired
     private AdminUserRepository adminUserRepository;
@@ -20,11 +18,14 @@ public class AdminUserRepositoryTest extends FasteatApplicationTests {
         adminUser.setPassword("AdminUser01");
         adminUser.setStatus("REGISTERED");
         adminUser.setRole("PARTNER");
-        adminUser.setCreatedAt(LocalDateTime.now());
-        adminUser.setCreatedBy("AdminServer");
+//        adminUser.setCreatedAt(LocalDateTime.now());
+//        adminUser.setCreatedBy("AdminServer");
 
         AdminUser newAdminUser = adminUserRepository.save(adminUser);
         Assertions.assertNotNull(newAdminUser);
+
+        newAdminUser.setAccount("CHANGE");
+        adminUserRepository.save(newAdminUser);
 
 
 
